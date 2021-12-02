@@ -1,0 +1,27 @@
+<!-- Main Content -->
+<div style="height:100%; width: 100%;" appDragdrop (fileDropped)="onFileDropped($event)">
+  <div style="display: flex; height: calc(100% - 60px); width:100%; margin-top: 3.3em;">
+    <dicom-viewer [enableViewerTools]="true" [enablePlayTools]="true" id="viewer" 
+    style="height:100%; width:100%; margin: 1px; border: 2px solid #1a1a1a; font-size: 16px;"></dicom-viewer>
+  </div>
+</div>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <a aria-label="Construe" rel="noopener" href="/">
+  <img
+    width="100"
+    src="assets/svg/construe.svg"
+  />
+  </a>
+  <div class="spacer"></div>
+  <div class="choose_file">
+    Choose DICOM Files
+    <input class="hide_file" type="file" multiple accept="application/dicom" id="images" title="Select your images"
+    (change)="loadDICOMImages($event.target.files)">
+  </div>
+  <button mat-icon-button (click)="openDialog()" style="margin: 10px; color: #2c2c2c;"><mat-icon>help_outline</mat-icon></button>
+</div>
+
+
+<router-outlet></router-outlet>
