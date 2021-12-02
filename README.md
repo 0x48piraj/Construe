@@ -16,9 +16,10 @@ This means occlusions must be treated differently. Objects in front of one anoth
 
 See the chest x-ray below: are the lungs behind or in front of the diaphragm? The answer is both. The occluded portion of the lungs cannot be perceived by traditional computer vision methods, however a deep neural network can easily learn to spot it.
 
-![MRI Slices Annotated](https://assets-global.website-files.com/5b26e3fda3234fe366aa392d/5eb16f3f8a376a095246514f_11-pairs-of-ribs-and-lumbosacral-transitional-vertebra.jpg)
-
-A chest x-ray displaying the lower portion of the lungs, extending in front of the diaphragm posteriorly and behind it anteriorly  
+<p align="center">
+<img alt="MRI Slices Annotated" src="https://assets-global.website-files.com/5b26e3fda3234fe366aa392d/5eb16f3f8a376a095246514f_11-pairs-of-ribs-and-lumbosacral-transitional-vertebra.jpg"><br>
+<i>A chest x-ray displaying the lower portion of the lungs, extending in front of the diaphragm posteriorly and behind it anteriorly.</i><br>
+</p>
 
 ### Formats may vary, for better or for worse
 
@@ -29,9 +30,10 @@ From a machine learning perspective, the DICOM file will be converted to another
 Differing views and differing volumes
 A case may contain 2D or 3D imaging. In both examples, often more than one view is necessary to assess what's happening. For example, the x-ray of a hand may only reveal a fracture when the hand is in certain pose or angle. Nonetheless it is standard to capture a frontal view of the hand anyways:  
 
-![MRI Slices Annotated](https://assets-global.website-files.com/5b26e3fda3234fe366aa392d/5eb1eaebdc812dfe3ba60ec6_hand_xray.jpg)
-
-A small fracture at the base of the 3rd and 4th middle phalanx is mostly only visible on the right image.  
+<p align="center">
+<img alt="MRI Slices Annotated" src="https://assets-global.website-files.com/5b26e3fda3234fe366aa392d/5eb1eaebdc812dfe3ba60ec6_hand_xray.jpg"><br>
+<i>A small fracture at the base of the 3rd and 4th middle phalanx is mostly only visible on the right image.</i><br>
+</p>
 
 It's important not to include un-usable data in your machine learning dataset. If a view such as the one above is useful for reference purposes, but cannot be labelled and turned into training data, it's best to discard it.
 
